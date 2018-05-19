@@ -1,0 +1,12 @@
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+*.exe
+*.pdb
+*.lock
+*.ide
+*.suo
+*.sln
+*.cache
+*.csproj
+!.gitignore
