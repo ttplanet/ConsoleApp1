@@ -14,11 +14,21 @@ namespace ConsoleApp1.Read
         /// <summary>
         /// 読み込みを行い文字列として返す
         /// </summary>
-        public string ReadFileItem()
+        public List<string> ReadFileItem(string seachInput)
         {
-            string readItem="";
+            List<string> readItem=new List<string>();
+            string readLine = "";
             StreamReader streamReader = new StreamReader(ConstPath.PATH_ITEM_FILE, ConstEncoding.ENC_UTF8);
-            readItem = streamReader.ReadToEnd();
+            while ((readLine = streamReader.ReadLine()) != null)
+            {
+                //一部一致の時
+                if (readLine.Contains(seachInput))
+                {
+                    readItem.Add(readLine);
+                }
+                
+            }
+
             return readItem;
         }
     }

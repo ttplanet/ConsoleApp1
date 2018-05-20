@@ -13,9 +13,9 @@ namespace ConsoleApp1.Base
     class SingletonBase<T> where T:new()
     {
 
-        public static T Instance()
+        public static T Instance
         {
-            return new T();
+            get { return new T(); }           
         }
     }
 }

@@ -11,6 +11,7 @@ namespace ConsoleApp1.Write
 {
     class WriteItem:SingletonBase<WriteItem>
     {
+        private const string doneWrite = "書き込みました";
         /// <summary>
         /// ファイルに書き込み
         /// </summary>
@@ -21,6 +22,7 @@ namespace ConsoleApp1.Write
               new StreamWriter(ConstPath.PATH_ITEM_FILE, true, ConstEncoding.ENC_UTF8);
             writer.WriteLine(input);
             writer.Close();
+            Console.WriteLine(doneWrite);
         }
     }
 }
